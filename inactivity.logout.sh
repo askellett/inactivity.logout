@@ -6,7 +6,7 @@ idleTime=$(/usr/sbin/ioreg -c IOHIDSystem | /usr/bin/awk '/HIDIdleTime/ {print i
 
 echo Idle Time is $idleTime seconds
 
-if (( idleTime > 21600 )); then
+if (( idleTime > 7200 )); then
 
 ## Get the logged in username
 loggedInUser=$(stat -f%Su /dev/console)
