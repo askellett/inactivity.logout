@@ -1,7 +1,7 @@
 #!/bin/sh
 exec 2>&1
 
-# Get MacOSX idletime. Shamelessly stolen from http://bit.ly/yVhc5H
+# Get MacOSX idletime
 idleTime=$(/usr/sbin/ioreg -c IOHIDSystem | /usr/bin/awk '/HIDIdleTime/ {print int($NF/1000000000); exit}')
 
 echo Idle Time is $idleTime seconds
